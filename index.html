@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DevKit · 离线文本工具集</title>
+<meta name="description" content="JSON、Base64、JWT、哈希、正则、时间戳 —— 一个离线可用的开发者文本工具集。">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="mark">DK</div>
+      <div class="brand-text">
+        <strong>DevKit</strong>
+        <span>离线 · 不上传</span>
+      </div>
+    </div>
+
+    <nav class="tools" id="tools" aria-label="工具列表"></nav>
+
+    <div class="sidebar-foot">
+      <span><kbd>⌘</kbd><kbd>K</kbd> 快速切换</span>
+      <span class="dot"></span>
+      <span id="count-label">9 个工具</span>
+    </div>
+  </aside>
+
+  <main class="stage">
+    <header class="stage-head">
+      <div>
+        <h1 id="title">JSON</h1>
+        <p id="desc">格式化、压缩、定位语法错误</p>
+      </div>
+      <div class="stage-tip" id="tip"></div>
+    </header>
+
+    <section class="panel" id="panel"></section>
+  </main>
+</div>
+
+<div class="palette" id="palette" hidden>
+  <div class="palette-box" role="dialog" aria-label="切换工具">
+    <input id="palette-input" type="text" placeholder="搜索工具…" autocomplete="off" spellcheck="false">
+    <div class="palette-list" id="palette-list"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
